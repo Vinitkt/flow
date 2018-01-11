@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.flow.query.model.ApplicationUser;
 import com.flow.query.repository.ApplicationUserRepository;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/")
+@Api(value="User Details", description ="User details from store")
 public class UserController {
 
 	private ApplicationUserRepository applicationUserRepository;
@@ -25,6 +29,7 @@ public class UserController {
 		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 	}
 
+	@ApiOperation(value = "sign up the user to platform")
 	@PostMapping(value = "/users/sign-up")
 	public ResponseEntity signUp(@RequestBody ApplicationUser user) {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));

@@ -36,7 +36,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		// Filters will not get executed for the resources
-		web.ignoring().antMatchers("/");
+		web.ignoring().antMatchers("/", "/api/v1/read-products-excel", "/resources/**", "/static/**", "/public/**",
+				"/webui/**", "/h2-console/**", "/configuration/**", "/swagger-ui/**", "/swagger-resources/**",
+				"/swagger-ui.html", "/api-docs", "/api-docs/**", "/v2/api-docs/**", "/*.html", "/**/*.html",
+				"/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.gif", "/**/*.svg", "/**/*.ico", "/**/*.ttf",
+				"/**/*.woff", "/api/v1/ta/**");
+
 	}
 
 	@Override
@@ -59,5 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
 		return source;
 	}
+	
+	
 
 }
