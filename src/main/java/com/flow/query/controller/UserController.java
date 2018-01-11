@@ -34,6 +34,6 @@ public class UserController {
 	
 	@GetMapping("/")
 	public String home() {
-		return "welcome to thrymr software";
+		return "welcome to thrymr software pvt ltd";
 	}
 }
