@@ -40,6 +40,6 @@ public class UserController {
 	@GetMapping("/")
 	public String home() {
 		return "welcome to Thrymr Software PVT Ltd Hyderabad Gachibowli Kapil Towers Financial District"
-				+ "telanga India" ;
+				+ "" ;
 	}
 }
