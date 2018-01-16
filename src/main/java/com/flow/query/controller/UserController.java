@@ -39,7 +39,7 @@ public class UserController {
 	
 	@GetMapping("/")
 	public String home() {
-		return "WELCOME TO THRYMR SOFTWARE\n Functional and Reliable Software Services | High Quality User Experience "
-				
-	}			;
+		return "ELCOME TO THRYMR SOFTWARE\n" + 
+				"Functional and Reliable Software Services | High Quality User Experience | Collaborative Innovation  " ;
+	}
 }
