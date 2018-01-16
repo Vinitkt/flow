@@ -40,6 +40,11 @@ public class UserController {
 	@GetMapping("/")
 	public String home() {
 		return "WELCOME TO THRYMR SOFTWARE\n" + 
-				"Functional and Reliable Software Services | High Quality User Experience | Collaborative Innovation  " ;
-	}
+				"Functional and Reliable Software Services | High Quality User Experience | Collaborative Innovation  "
+				
+				;
+	}5th Floor, Kapil Towers, 
+	Nanakramguda, 
+	Financial District, 
+	Hyderabad, Telangana - 500032"
 }
